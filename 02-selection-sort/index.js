@@ -1,4 +1,4 @@
-const arr = [
+const numbers = [
   9, 2, 4, 6, 7, 3, 5, 12, 67, 34, 2, 0, 6, 45, 3, 65, 23, 16, 56, -30
 ];
 
@@ -14,14 +14,9 @@ const sortAscending = (arr = []) => {
   const givenArray = [...arr];
   const newArray = [];
 
-  arr.forEach(() => {
-    const lastItemIndex = findLeastItemIndex(givenArray);
-
-    newArray.push(givenArray[lastItemIndex]);
-    givenArray.splice(lastItemIndex, 1);
-  });
+  arr.forEach(() => newArray.push(...givenArray.splice(findLeastItemIndex(givenArray), 1)));
 
   return newArray;
 }
 
-console.log(sortAscending(arr));
+console.log(sortAscending(numbers));
