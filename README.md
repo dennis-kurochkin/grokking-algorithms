@@ -1,2 +1,4 @@
-# grokking-algorithms
-My take on Grokking Algorithms
+# Grokking Algorithms
+
+In this repository I train my algorithmic thinking and data structures knowledge.
+ 
